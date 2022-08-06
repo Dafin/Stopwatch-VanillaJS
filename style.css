@@ -3,24 +3,23 @@
     font-family: readoutFont;
     src: url(/resources/LEDBOARD.TTF);
 }
-  
+  h1{
+    text-align: center;
+  }
+
 
 body {
     background-color: darkslategray;
     color: lightgreen;
-    font-size: larger;
+    font-size: x-large;
 }
 
 button {
     width: 100px;
     height: 30px;
-    border: 3px solid white;
-    background: #202020;
-    color: white;
     cursor: pointer;
     outline: none;
 }
-
 
 #buttons {
     position: absolute;
@@ -32,8 +31,12 @@ button {
 #buttons li {
     display: inline;
     padding-left: 10px;
+    border: 4px;
+    border-style: outset;
+    border-color: black;
+    text-align: center;
+    font-family: monospace;
 }
-
 
 #readout {
     font-family: readoutFont, monospace;
@@ -41,5 +44,25 @@ button {
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -85%);
+    border: 4px;
+    border-style: inset;
+    border-color: black;
+}
+
+#stopwatch{
+    background-color: blueviolet;
+    border: 1px black;
+    z-index: 2;
+}
+#start{
+    background-color: green;
+}
+
+#stop{
+    background-color: orangered;
+}
+
+#reset{
+    background-color: gray;
 }
