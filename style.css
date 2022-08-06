@@ -36,6 +36,8 @@ button {
     border-color: black;
     text-align: center;
     font-family: monospace;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #readout {
@@ -51,9 +53,8 @@ button {
 }
 
 #stopwatch{
-    background-color: blueviolet;
-    border: 1px black;
-    z-index: 2;
+z-index: 1;
+
 }
 #start{
     background-color: green;
@@ -66,3 +67,7 @@ button {
 #reset{
     background-color: gray;
 }
+
+#buttons li:hover {
+    font-weight: bolder;
+    border-style: inset;
