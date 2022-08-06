@@ -28,3 +28,12 @@ button {
     display: inline;
     padding-left: 10px;
 }
+
+
+#readout {
+    font-size: 58px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
