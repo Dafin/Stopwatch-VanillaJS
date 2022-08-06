@@ -15,31 +15,31 @@
     <!-- Stopwatch -->
     <div id="stopwatch">
         <div id="readout">
-            00:00:00
+            01:02:03
         </div>
         <!-- Stopwatch Controls -->
         <ul id="buttons">
-            <li id="start"><button onclick="startTimer()">Start</button></li>
-            <li id="stop"><button onclick="stopTimer()">Stop</button></li>
-            <li id="reset"><button onclick="resetTimer()">Reset</button></li>
+            <li id="start"><button onclick="startStopwatch()">Start</button></li>
+            <li id="stop"><button onclick="stopStopwatch()">Stop</button></li>
+            <li id="reset"><button onclick="resetStopwatch()">Reset</button></li>
         </ul>
     </div>
     <!-- <script src="/vanillaStopWatch.js"> -->
 
     <script>
+        const stopwatch_readout = document.getElementById('readout');
 
-        function startTimer() {
+        function startStopwatch() {
             alert('start');
         }
 
-        function stopTimer() {
+        function stopStopwatch() {
             alert('stop');
         }
 
-        function resetTimer() {
-            alert('reset');
+        function resetStopwatch() {
+            stopwatch_readout.innerHTML = '00:00:00';
         }
-
     </script>
 
 </body>
