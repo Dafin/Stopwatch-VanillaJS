@@ -1,4 +1,9 @@
 @import "new-reset.css" screen;
+@font-face {
+    font-family: readoutFont;
+    src: url(/resources/LEDBOARD.TTF);
+}
+  
 
 body {
     background-color: darkslategray;
@@ -31,6 +36,7 @@ button {
 
 
 #readout {
+    font-family: readoutFont, monospace;
     font-size: 58px;
     position: absolute;
     top: 45%;
