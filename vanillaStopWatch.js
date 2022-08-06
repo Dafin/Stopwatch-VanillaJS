@@ -1,6 +1,6 @@
 function startTimer() {
-alert('start');
-    }
+    alert('start');
+}
 
 function stopTimer() {
     alert('stop');
