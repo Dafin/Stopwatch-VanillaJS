@@ -40,23 +40,23 @@
         }
 
         function stopStopwatch() {
-            alert('stop');
+            if (stopwatch_halted == false) {
+                stopwatch_halted = true;
+            }
         }
 
         function resetStopwatch() {
-            stopwatch_readout.innerHTML = '00:00:00';
+            stopwatch_readout.innerHTML = '00:00:00';   //this is a string!
             // reseting values, to refactor?
             hr = 0;
             min = 0;
             sec = 0;
         }
 
-
         function runStopwatch() {
             alert('running');
             sec = sec + 1;
             console.log(sec)
-
         }
 
     </script>
