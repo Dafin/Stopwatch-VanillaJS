@@ -36,7 +36,7 @@
 
 
         function startStopwatch() {
-            runStopwatch();
+            runStopwatchTick();
         }
 
         function stopStopwatch() {
@@ -51,12 +51,14 @@
             hr = 0;
             min = 0;
             sec = 0;
+            stopwatch_halted = true;
+
         }
 
-        function runStopwatch() {
+        function runStopwatchTick() {
     
             sec = sec + 1;
-            setTimeout("runStopwatch()", 1000); 
+            setTimeout("runStopwatchTick()", 1000); 
             console.log(sec)
         }
 
