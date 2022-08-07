@@ -54,8 +54,9 @@
         }
 
         function runStopwatch() {
-            alert('running');
+    
             sec = sec + 1;
+            setTimeout("runStopwatch()", 1000); 
             console.log(sec)
         }
 
