@@ -52,8 +52,7 @@
         }
 
         function resetStopwatch() {
-            stopwatch_readout.innerHTML = '00:00:00';   //this is a string!
-            // reseting values, to refactor?
+            stopwatch_readout.innerHTML = "00:00:00";
             hr = 0;
             min = 0;
             sec = 0;
@@ -68,37 +67,34 @@
             min = parseInt(min);
             hr = parseInt(hr);
             sec = sec + 1;
-            
 
-
-            //increment minutes
-            if (sec == 60) {
+            if (sec === 60) {
                 min = min + 1;
                 sec = 0;
             }
-            if (min == 60) {
+            if (min === 60) {
                 hr = hr + 1;
                 min = 0;
                 sec = 0;
             }
 
-            if (sec < 10 || sec == 0) {
+            if (sec < 10 || sec === 0) {
                 sec = "0" + sec;
             }
-            if (min < 10 || min == 0) {
+            if (min < 10 || min === 0) {
                 min = "0" + min;
             }
-            if (hr < 10 || hr == 0) {
+            if (hr < 10 || hr === 0) {
                 hr = "0" + hr;
             }
 
-            stopwatch_readout.innerHTML = hr + ':' + min + ':' + sec;
+            stopwatch_readout.innerHTML = hr + ":" + min + ":" + sec;
             console.log(sec);
         }
 
         function haltStopwatchTick() {
             clearTimeout(startTimeout);
-        } 
+        }
     </script>
 
 </body>
