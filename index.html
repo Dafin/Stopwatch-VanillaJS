@@ -27,8 +27,9 @@
     <!-- <script src="/vanillaStopWatch.js"> -->
 
     <script>
-        const stopwatch_readout = document.getElementById('readout');
-
+        const stopwatch_readout = document.getElementById('readout');    
+        let startTimeout 
+        
         var hr = 0;
         var min = 0;
         var sec = 0;
@@ -43,6 +44,7 @@
             if (stopwatch_halted == false) {
                 stopwatch_halted = true;
             }
+            haltStopwatchTick()
         }
 
         function resetStopwatch() {
@@ -52,16 +54,20 @@
             min = 0;
             sec = 0;
             stopwatch_halted = true;
+            haltStopwatchTick()
 
         }
 
         function runStopwatchTick() {
-    
+        startTimeout = setTimeout("runStopwatchTick()", 1000); 
             sec = sec + 1;
-            setTimeout("runStopwatchTick()", 1000); 
+            
             console.log(sec)
         }
-
+        
+        function haltStopwatchTick(){
+            clearTimeout(startTimeout);
+        } 
     </script>
 
 </body>
