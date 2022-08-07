@@ -1,12 +1,13 @@
 @import "new-reset.css" screen;
 @font-face {
     font-family: readoutFont;
-    src: url(/resources/LEDBOARD.TTF);
+    src: url(/resources/LEDBOARD.TTF) format('truetype');
 }
   h1{
     text-align: center;
     font-family: monospace;
     font-size: xx-large;
+    margin-top: 15%;
   }
 
 
