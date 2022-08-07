@@ -5,11 +5,13 @@
 }
   h1{
     text-align: center;
+    font-family: monospace;
+    font-size: xx-large;
   }
 
 
 body {
-    background-color: darkslategray;
+    background-color:rgb(23, 23, 23);
     color: lightgreen;
     font-size: x-large;
 }
