@@ -8,6 +8,7 @@
     font-family: monospace;
     font-size: xx-large;
     margin-top: 15%;
+    letter-spacing: 0.15em;
   }
 
 
@@ -44,7 +45,7 @@ button {
     padding-bottom: 5px;
     padding-left: 7px;
     padding-right: 7px;;
-    opacity: 0.75;
+    opacity: 0.9;
     font-weight: bolder;
 }
 
