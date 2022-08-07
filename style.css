@@ -34,13 +34,17 @@ button {
 #buttons li {
     display: inline;
     padding-left: 10px;
-    border: 4px;
+    border: 2px;
     border-style: outset;
     border-color: black;
     text-align: center;
     font-family: monospace;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;;
+    opacity: 0.75;
+    font-weight: bolder;
 }
 
 #readout {
@@ -53,7 +57,7 @@ button {
     border: 3px;
     border-style: inset;
     border-color: black;
-    /* box-shadow: inset; */
+
 }
 
 #stopwatch{
@@ -73,7 +77,9 @@ z-index: 1;
 }
 
 #buttons li:hover {
-    font-weight: bolder;
+    font-weight: lighter;
     border-style: inset;
-    opacity: 100%;
+    opacity: 1;
+    color: white;
+    text-transform: uppercase;
 }
