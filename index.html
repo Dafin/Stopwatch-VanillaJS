@@ -15,7 +15,7 @@
     <!-- Stopwatch -->
     <div id="stopwatch">
         <div id="readout">
-            01:02:03
+            00:00:00
         </div>
         <!-- Stopwatch Controls -->
         <ul id="buttons">
@@ -27,28 +27,28 @@
     <!-- <script src="/vanillaStopWatch.js"> -->
 
     <script>
-        const stopwatch_readout = document.getElementById('readout');
-        let startTimeout
+        const stopwatch_readout = document.getElementById("readout");
+        let startTimeout;
 
-        var hr = 0;
-        var min = 0;
-        var sec = 0;
-        var stopwatch_halted = true;
+        let hr = 0;
+        let min = 0;
+        let sec = 0;
+        let stopwatch_halted = true;
 
 
         function startStopwatch() {
 
-            if (stopwatch_halted == true) {
+            if (stopwatch_halted === true) {
                 runStopwatchTick();
                 stopwatch_halted = false;
             }
         }
-
+ 
         function stopStopwatch() {
-            if (stopwatch_halted == false) {
+            if (stopwatch_halted === false) {
                 stopwatch_halted = true;
             }
-            haltStopwatchTick()
+            haltStopwatchTick();
         }
 
         function resetStopwatch() {
@@ -58,7 +58,7 @@
             min = 0;
             sec = 0;
             stopwatch_halted = true;
-            haltStopwatchTick()
+            haltStopwatchTick();
 
         }
 
@@ -66,7 +66,7 @@
             startTimeout = setTimeout("runStopwatchTick()", 1000);
             sec = sec + 1;
             stopwatch_readout.innerHTML = hr + ':' + min + ':' + sec;
-            console.log(sec)
+            console.log(sec);
         }
 
         function haltStopwatchTick() {
