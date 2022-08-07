@@ -37,7 +37,11 @@
 
 
         function startStopwatch() {
-            runStopwatchTick();
+
+            if (stopwatch_halted == true) {
+                runStopwatchTick();
+                stopwatch_halted = false;
+            }
         }
 
         function stopStopwatch() {
