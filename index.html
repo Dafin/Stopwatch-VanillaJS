@@ -28,17 +28,11 @@
 
     <script>
         const stopwatch_readout = document.getElementById("readout");
-        let startTimeout;
+        const haltStopwatchTick = () => clearTimeout(startTimeout);
 
         let [hr, min, sec] = [0, 0, 0];
-
+        let startTimeout;
         let stopwatch_halted = true;
-
-        // function haltStopwatchTick() {
-        //     clearTimeout(startTimeout);
-        // }
-
-        let haltStopwatchTick = () => clearTimeout(startTimeout);
 
 
         function startStopwatch() {
@@ -49,7 +43,7 @@
             }
 
         }
-        // stopwatch_halted ? runStopwatchTick() 
+
 
         function stopStopwatch() {
             if (!stopwatch_halted) {
@@ -91,7 +85,6 @@
             stopwatch_readout.innerHTML = hr + ":" + min + ":" + sec;
             console.log(sec);
         }
-
 
 
     </script>
