@@ -30,7 +30,7 @@
         const stopwatch_readout = document.getElementById("readout");
         let startTimeout;
 
-        let [hr, min, sec] = [0,0,0];
+        let [hr, min, sec] = [0, 0, 0];
 
         let stopwatch_halted = true;
 
@@ -41,7 +41,9 @@
                 runStopwatchTick();
                 stopwatch_halted = false;
             }
+
         }
+        // stopwatch_halted ? runStopwatchTick() 
 
         function stopStopwatch() {
             if (stopwatch_halted === false) {
@@ -52,9 +54,7 @@
 
         function resetStopwatch() {
             stopwatch_readout.innerHTML = "00:00:00";
-            hr = 0;
-            min = 0;
-            sec = 0;
+            hr = 00, min = 00,sec = 00;
             stopwatch_halted = true;
             haltStopwatchTick();
 
@@ -68,13 +68,10 @@
             sec = sec + 1;
 
             if (sec === 60) {
-                min = min + 1;
-                sec = 0;
+                min = min + 1 , sec = 0;
             }
             if (min === 60) {
-                hr = hr + 1;
-                min = 0;
-                sec = 0;
+                hr = hr + 1, min = 0; sec = 0;
             }
 
             if (sec < 10 || sec === 0) {
