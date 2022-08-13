@@ -1,25 +1,27 @@
 @import "new-reset.css" screen;
+
 @font-face {
     font-family: readoutFont;
-    src: url(/resources/LEDBOARD.TTF) format('truetype');
+    src: url(https://dafin.uk/vanilla-stopwatch/resources/ledboard.ttf) format('truetype');
 }
-  h1{
+
+h1 {
     text-align: center;
     font-family: monospace;
     font-size: xx-large;
     margin-top: 15%;
     letter-spacing: 0.15em;
-  }
+}
 
 
 body {
-    background-color:rgb(23, 23, 23);
+    background-color: rgb(23, 23, 23);
     color: lightgreen;
     font-size: x-large;
 }
 
 button {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100px;
     height: 30px;
     cursor: pointer;
@@ -45,7 +47,8 @@ button {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 7px;
-    padding-right: 7px;;
+    padding-right: 7px;
+    ;
     opacity: 0.9;
     font-weight: 300;
     opacity: .7;
@@ -62,23 +65,24 @@ button {
     border-style: inset;
     border-color: black;
     z-index: 9;
-    height:max-content;
+    height: max-content;
 
 }
 
-#stopwatch{
-z-index: 1;
+#stopwatch {
+    z-index: 1;
 
 }
-#start{
+
+#start {
     background-color: green;
 }
 
-#stop{
+#stop {
     background-color: orangered;
 }
 
-#reset{
+#reset {
     background-color: gray;
 }
 
@@ -87,4 +91,47 @@ z-index: 1;
     border-style: inset;
     opacity: 1;
     color: white;
+    margin: 0px;
+    border: inset;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: darkred;
+}
+
+
+@media (max-width: 1240px) {
+    h1 {
+        position: relative;
+    }
+
+    ul {
+        position: absolute;
+        padding: 5px 0px;  
+        /* margin-top: 60px; */
+    }
+
+    /* ul.li {
+        margin:0 0 10px 0;   
+        /* margin-top: 60px; 
+    } */
+
+    li button {
+        position: relative;
+        display: inline-block;
+        width: 360px;
+    }
+
+    #buttons {
+        /* position: block; */
+        padding-top: 3%;
+        /* left:21%; */
+        /* transform: translate(-51.6%, -45%); */
+        bottom: 65%;
+
+    }
+    #buttons li {
+    display: block;
+    margin-top: 2px;
+    }
+    
 }
