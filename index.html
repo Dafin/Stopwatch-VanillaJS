@@ -49,13 +49,12 @@
             haltStopwatchTick();
         }
 
-        function resetStopwatch() {
+        const resetStopwatch = () => {
+            stopwatch_halted;
             stopwatch_readout.innerHTML = "00:00:00";
-            hr = 00, min = 00, sec = 00;
-            stopwatch_halted = true;
+            hr = min = sec = 00;
             haltStopwatchTick();
-
-        }
+        } 
 
         function runStopwatchTick() {
             startTimeout = setTimeout("runStopwatchTick()", 1000);
