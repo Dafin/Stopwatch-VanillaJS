@@ -34,14 +34,11 @@
         let startTimeout;
         let stopwatch_halted = true;
 
-
-        function startStopwatch() {
-
+        const startStopwatch = () => {
             if (stopwatch_halted) {
                 runStopwatchTick();
                 stopwatch_halted = false;
             }
-            else return stopwatch_halted;
 
         }
 
