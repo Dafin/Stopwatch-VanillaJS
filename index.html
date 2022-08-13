@@ -37,7 +37,7 @@
 
         function startStopwatch() {
 
-            if (stopwatch_halted === true) {
+            if (stopwatch_halted) {
                 runStopwatchTick();
                 stopwatch_halted = false;
             }
@@ -46,7 +46,7 @@
         // stopwatch_halted ? runStopwatchTick() 
 
         function stopStopwatch() {
-            if (stopwatch_halted === false) {
+            if (!stopwatch_halted) {
                 stopwatch_halted = true;
             }
             haltStopwatchTick();
@@ -62,9 +62,7 @@
 
         function runStopwatchTick() {
             startTimeout = setTimeout("runStopwatchTick()", 1000);
-            sec = parseInt(sec);
-            min = parseInt(min);
-            hr = parseInt(hr);
+            sec = parseInt(sec), min = parseInt(min) , hr = parseInt(hr);
             sec = sec + 1;
 
             if (sec === 60) {
@@ -91,6 +89,9 @@
         function haltStopwatchTick() {
             clearTimeout(startTimeout);
         }
+
+//  let haltStopwatchTick 
+
     </script>
 
 </body>
