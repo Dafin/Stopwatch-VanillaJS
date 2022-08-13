@@ -53,12 +53,12 @@
             stopwatch_halted;
             stopwatch_readout.innerHTML = "00:00:00";
             hr = min = sec = 00;
-            haltStopwatchTick(); // Can comment out this line to keep ticking
+            haltStopwatchTick();        // Can comment out this line to keep ticking
         }
 
         const runStopwatchTick = () => {
             startTimeout = setTimeout("runStopwatchTick()", 1000);
-            sec = parseInt(sec), min = parseInt(min), hr = parseInt(hr);
+            sec = +sec, min = +min, hr = +hr;           // parseInt + shorthand 
             sec = sec + 1;
 
             if (sec === 60) {
